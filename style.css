@@ -220,7 +220,6 @@ img {
 .container {
   width: 100%;
   max-width: 1200px;
-  min-width: 1200px;
 }
 
 .info-controles p strong {
@@ -252,88 +251,15 @@ img {
   gap: 10px;
 }
 
-@media (max-width: 768px) {
-
-  html, body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* 🔥 força TODAS imagens a nunca estourar */
-  img {
-    max-width: 100% !important;
-    height: auto;
-  }
-
-  /* 🔥 container nunca pode “empurrar tela” */
-  .container {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-  }
-
-  /* 🔥 evita qualquer elemento expandir fora */
-  * {
-    box-sizing: border-box;
-  }
-
-  /* 🔥 imagens específicas */
-  .img-jogo,
-  .img-lateral {
-    width: 100% !important;
-    max-width: 100%;
-    float: none;
-  }
-
-  /* 🔥 NAV sem quebrar largura */
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  nav a {
-    font-size: 13px;
-  }
-
-  /* 🔥 textos ajustados */
-  p {
-    font-size: 15px;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-
-  .titulo-secao {
-    font-size: 20px;
-  }
-
-  /* 🔥 cards não estouram */
-  .cards {
+@media screen and (max-width: 768px){
+  .produto-container{
+    width:100%;
     flex-direction: column;
-    align-items: center;
   }
+}
 
-  .card {
-    width: 90%;
-  }
-
-  /* 🔥 controles */
-  .info-controles p {
-    font-size: 14px;
-  }
-
-  /* 🔥 LOGO */
-  .logo {
-    width: 50px;
-  }
-
-  /* 🔥 INTRO VÍDEO (IMPORTANTE) */
-  #videoIntro {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-  }
+.produto-container{
+  display: flex;
+  width:100%;
+  justify-content: space-around;
 }
