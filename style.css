@@ -12,7 +12,18 @@ header {
 }
 
 .logo {
-  width: 80px;
+  width: 90px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* SUBTÍTULO CENTRAL */
+.subtitulo {
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
+  font-size: 18px;
+  color: #93c5fd;
 }
 
 /* MENU */
@@ -27,33 +38,49 @@ nav {
 nav a {
   color: #93c5fd;
   text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:hover {
   color: white;
 }
 
-/* CONTEÚDO */
+/* CONTAINER */
 .container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
-  text-align: center;
   padding: 40px;
+}
+
+/* TÍTULOS */
+h1, h2, h3 {
+  text-align: center;
+}
+
+/* TEXTOS */
+p {
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* INÍCIO */
+.inicio p {
+  max-width: 800px;
+  margin: 20px auto;
 }
 
 /* CARDS */
 .cards {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 .card {
   background: rgba(255,255,255,0.05);
-  padding: 20px;
+  padding: 15px;
   border-radius: 15px;
-  width: 160px;
+  width: 220px;
   text-decoration: none;
   color: white;
   transition: 0.3s;
@@ -63,68 +90,59 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+/* IMAGENS MEMBROS */
 .card img {
-  width: 80px;
-  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
-/* IMAGENS */
-img {
-  max-width: 100%;
-  margin-top: 20px;
-  border-radius: 10px;
+/* PERFIL */
+.perfil {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
 }
 
-/* ===== DOCS DESIGN ===== */
-
-.container h2 {
-  margin-bottom: 20px;
+.perfil img {
+  width: 260px;
+  border-radius: 12px;
 }
 
-.container h3 {
-  margin-top: 40px;
-  color: #60a5fa;
-}
-
-.container h4 {
-  margin-top: 20px;
-  color: #93c5fd;
-}
-
-.container p {
-  line-height: 1.6;
-  margin: 10px 0;
-}
-
-.container ul,
-.container ol {
-  text-align: left;
+.perfil div {
   max-width: 600px;
-  margin: 10px auto;
 }
 
-.container li {
-  margin: 5px 0;
+/* NÃO CENTRALIZAR TÍTULOS DOS MEMBROS */
+.perfil h1,
+.perfil h2,
+.perfil h3 {
+  text-align: left;
+}
+
+/* IMAGEM REVISTA */
+.img-lateral {
+  float: right;
+  width: 320px;
+  margin: 0 0 20px 20px;
+  border-radius: 12px;
+}
+
+.clear {
+  clear: both;
+}
+
+/* IMAGEM JOGO */
+.img-jogo {
+  display: block;
+  margin: 30px auto;
+  max-width: 600px;
+  border-radius: 12px;
 }
 
 hr {
+  margin: 40px 0;
   border: none;
   height: 1px;
   background: rgba(255,255,255,0.2);
-  margin: 40px 0;
-}
-
-/* BOTÕES */
-.container a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #3b82f6;
-  border-radius: 6px;
-  color: white;
-  text-decoration: none;
-}
-
-.container a:hover {
-  background: #2563eb;
 }
