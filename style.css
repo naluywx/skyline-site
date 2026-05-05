@@ -1,27 +1,24 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #020617, #1e3a8a);
+  background: linear-gradient(180deg, #020617, #0f172a, #1e3a8a);
   color: white;
 }
 
 /* HEADER */
 header {
-  text-align: center;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-  width: 90px;
-  display: block;
-  margin: 0 auto;
+  width: 80px;
 }
 
 /* SUBTÍTULO */
 .subtitulo {
-  text-align: center;
-  width: 100%;
-  margin: 10px auto;
   font-size: 18px;
   color: #93c5fd;
 }
@@ -47,40 +44,51 @@ nav a:hover {
 
 /* CONTAINER */
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
-  padding: 40px;
+  padding: 60px 20px;
 }
 
 /* TÍTULOS */
-h1, h2, h3 {
+h1, h2 {
   text-align: center;
 }
 
-/* TEXTOS */
-p {
-  text-align: left;
-  line-height: 1.6;
+.titulo-secao {
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-/* INÍCIO */
-.inicio p {
-  max-width: 800px;
-  margin: 20px auto;
+.titulo-secao::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #60a5fa;
+  display: block;
+  margin: 10px auto;
+}
+
+/* TEXTO */
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e2e8f0;
 }
 
 /* CARDS */
 .cards {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
-  background: rgba(255,255,255,0.05);
-  padding: 15px;
-  border-radius: 15px;
   width: 220px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
   text-decoration: none;
   color: white;
   transition: 0.3s;
@@ -90,10 +98,8 @@ p {
   transform: scale(1.05);
 }
 
-/* IMAGENS MEMBROS */
 .card img {
   width: 100%;
-  height: auto;
   border-radius: 12px;
 }
 
@@ -101,7 +107,6 @@ p {
 .perfil {
   display: flex;
   gap: 40px;
-  align-items: flex-start;
 }
 
 .perfil img {
@@ -109,57 +114,190 @@ p {
   border-radius: 12px;
 }
 
-.perfil div {
-  max-width: 600px;
+.perfil h2 {
+  text-align: center;
+  color: #93c5fd;
 }
 
-/* NÃO CENTRALIZAR NOS MEMBROS */
-.perfil h1,
-.perfil h2,
-.perfil h3 {
-  text-align: left;
-}
-
-/* IMAGEM REVISTA */
+/* IMAGEM HISTÓRIA */
 .img-lateral {
   float: right;
-  width: 320px;
-  margin: 0 0 20px 20px;
+  width: 350px;
+  margin: 10px 0 20px 30px;
   border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
-/* LIMPAR FLOAT */
 .clear {
   clear: both;
 }
 
-/* IMAGEM CENTRAL */
+/* IMAGEM MECÂNICA */
 .img-jogo {
   display: block;
-  margin: 30px auto;
-  max-width: 600px;
+  margin: 40px auto;
+  width: 100%;
+  max-width: 900px;
   border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
-hr {
-  margin: 40px 0;
-  border: none;
-  height: 1px;
-  background: rgba(255,255,255,0.2);
+/* TEXTO CONTROLES */
+.info-controles {
+  text-align: center;
+  margin-top: 20px;
 }
 
-/* 📱 RESPONSIVO */
+.info-controles p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .img-lateral {
+    float: none;
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+/* INTRO */
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#videoIntro {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========================= */
+/* 🔥 FIX GLOBAL DEFINITIVO */
+/* ========================= */
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main.container {
+  flex: 1;
+  width: 100%;
+}
+
+header, nav, main {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 1200px;
+}
+
+.info-controles p strong {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: 0.2s;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* efeito hover (PC) */
+.info-controles p strong:hover {
+  background: rgba(96, 165, 250, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.6);
+}
+
+.teclas-img {
+  transition: 0.3s ease;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.info-controles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 @media (max-width: 768px) {
 
+  /* 🔥 evita tudo ficar “gigante ou quebrado” */
+  body {
+    font-size: 16px;
+  }
+
+  /* 🔥 títulos menores no celular */
+  h1 {
+    font-size: 24px;
+  }
+
+  .titulo-secao {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* 🔥 menu vira mais compacto */
   nav {
-    flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
   }
 
+  nav a {
+    font-size: 14px;
+  }
+
+  /* 🔥 container não “aperta demais” */
   .container {
-    padding: 20px;
+    padding: 30px 15px;
   }
 
+  /* 🔥 imagens sempre dentro da tela */
+  .img-lateral,
+  .img-jogo {
+    width: 100%;
+    float: none;
+    margin: 20px 0;
+  }
+
+  /* 🔥 cards em coluna no celular */
   .cards {
     flex-direction: column;
     align-items: center;
@@ -169,35 +307,20 @@ hr {
     width: 90%;
   }
 
-  .perfil {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .perfil img {
-    width: 200px;
-  }
-
-  .perfil div {
-    max-width: 100%;
-  }
-
-  .img-lateral {
-    float: none;
-    width: 100%;
-    margin: 20px auto;
-  }
-
-  .img-jogo {
-    width: 100%;
-  }
-
-  p {
+  /* 🔥 controles mais compactos */
+  .info-controles p {
     font-size: 15px;
   }
 
+  /* 🔥 LOGO menor */
   .logo {
-    width: 70px;
+    width: 60px;
+  }
+
+  /* 🔥 INTRO (VÍDEO) no celular */
+  #videoIntro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
