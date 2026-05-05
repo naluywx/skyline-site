@@ -17,7 +17,7 @@ header {
   margin: 0 auto;
 }
 
-/* SUBTÍTULO CENTRAL */
+/* SUBTÍTULO */
 .subtitulo {
   text-align: center;
   width: 100%;
@@ -113,7 +113,7 @@ p {
   max-width: 600px;
 }
 
-/* NÃO CENTRALIZAR TÍTULOS DOS MEMBROS */
+/* NÃO CENTRALIZAR NOS MEMBROS */
 .perfil h1,
 .perfil h2,
 .perfil h3 {
@@ -128,11 +128,12 @@ p {
   border-radius: 12px;
 }
 
+/* LIMPAR FLOAT */
 .clear {
   clear: both;
 }
 
-/* IMAGEM JOGO */
+/* IMAGEM CENTRAL */
 .img-jogo {
   display: block;
   margin: 30px auto;
@@ -145,4 +146,58 @@ hr {
   border: none;
   height: 1px;
   background: rgba(255,255,255,0.2);
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .perfil {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .perfil img {
+    width: 200px;
+  }
+
+  .perfil div {
+    max-width: 100%;
+  }
+
+  .img-lateral {
+    float: none;
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .img-jogo {
+    width: 100%;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 70px;
+  }
 }
