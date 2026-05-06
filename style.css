@@ -292,3 +292,10 @@ p, h1, h2, h3 {
 .perfil div {
   max-width: 100%;
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* ESSENCIAL */
+}
