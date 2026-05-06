@@ -13,7 +13,7 @@
 
 <body>
 
-<!-- INTRO COM VÍDEO -->
+<!-- INTRO VIDEO-->
 <div id="intro">
   <video id="videoIntro" autoplay muted playsinline>
     <source src="animate.mp4" type="video/mp4">
@@ -38,29 +38,33 @@
 <h2 class="titulo-secao">Bem-vindo</h2>
 
 <p>
-Somos uma equipe dedicada ao desenvolvimento de jogos digitais, focada em criar experiências envolventes e narrativas marcantes.
+Somos uma equipe dedicada ao desenvolvimento de jogos digitais, focada 
+em criar experiências envolventes e narrativas marcantes.
 </p>
 
 <p>
 Nosso projeto atual, <strong>Echoes of Solitude</strong>, traz uma história profunda combinada com mecânicas de exploração e decisões impactantes.
 </p>
 
-<!-- 🔹 SEÇÃO 1: SOBRE A EQUIPE -->
+<!-- SOBRE A EQUIPE -->
 <h2 class="titulo-secao">Sobre a Skyline Games</h2>
 
 <p>
-Na Skyline Games, acreditamos que jogos vão muito além do entretenimento. Nosso objetivo é desenvolver experiências interativas que envolvam o jogador emocionalmente e, ao mesmo tempo, o levem a refletir sobre questões importantes do mundo real.
+Na Skyline Games, acreditamos que jogos 
+vão muito além do entretenimento. Nosso objetivo é desenvolver experiências interativas que envolvam o jogador emocionalmente e, ao mesmo tempo, o levem a refletir sobre questões importantes do mundo real.
 </p>
 
 <p>
-O nome “Skyline” representa a ideia de horizonte e expansão de possibilidades. Assim como uma linha no céu simboliza o encontro entre o conhecido e o desconhecido, nossa equipe busca ultrapassar limites criativos e explorar novas formas de narrativa e gameplay.
+O nome “Skyline” representa a ideia de horizonte e expansão de possibilidades. 
+Assim como uma linha no céu simboliza o encontro entre o conhecido e o desconhecido, nossa equipe busca ultrapassar limites criativos e explorar novas formas de narrativa e gameplay.
 </p>
 
 <p>
-Dentro da equipe, todos participam ativamente de diferentes etapas do desenvolvimento, valorizando o trabalho em conjunto e a troca de ideias.
+Dentro da equipe, todos participam ativamente de diferentes etapas do desenvolvimento, valorizando o trabalho 
+em conjunto e a troca de ideias.
 </p>
 
-<!-- 🔹 SEÇÃO 2: IDEIA DO JOGO -->
+<!-- IDEIA DO JOGO -->
 <h2 class="titulo-secao">Ideia de Echoes of Solitude</h2>
 
 <p>
@@ -81,19 +85,18 @@ Nosso foco não é apenas criar um jogo, mas construir uma experiência que una 
 
 </main>
 
-<!--SCRIPT CORRIGIDO -->
 <script>
 const intro = document.getElementById("intro");
 const video = document.getElementById("videoIntro");
 
-// verifica se já mostrou nesta sessão
+// verifica se já mostrou na tela
 const introMostrada = sessionStorage.getItem("introMostrada");
 
 if (introMostrada) {
-  // já viu nesta sessão → não mostra
+  // já viu na tela → não mostra
   intro.style.display = "none";
 } else {
-  // primeira vez na sessão → mostra vídeo
+  // primeira vez na tela → mostra vídeo
   video.onended = function () {
     intro.style.display = "none";
     sessionStorage.setItem("introMostrada", "true");
