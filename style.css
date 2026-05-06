@@ -218,7 +218,9 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 900px; /* limite confortável */
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .info-controles p strong {
@@ -299,3 +301,31 @@ nav {
   gap: 20px;
   flex-wrap: wrap; /* ESSENCIAL */
 }
+
+p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 30px 15px;
+  }
+
+  p {
+    max-width: 100%;
+  }
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
